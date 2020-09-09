@@ -64,6 +64,9 @@ if not os.path.exists('E:\Magang/new/'+namaprovinsi): #melakukan create direktor
     os.makedirs('E:\Magang/new/'+namaprovinsi)
     
 ```
+
+![component](gambar/1.jpeg)
+
 Pada tahapan pertama yang dilakukan adalah inisiasi variabel page yang ingin dicetak dan
 pembuatan direktori untuk menyimpan hasil output
 
@@ -76,6 +79,9 @@ for x in range(pageend-pagestart+1):
 print("done")
     
 ```
+
+![component](gambar/2.jpeg)
+
 Setelah Direktori dibuat tahap selanjutnya adalah melakukan convert dari pdf ke csv page per page
 pada case ini output dari file csv per page disimpan didalam direktori `E:\Magang/new/bali/`
 
