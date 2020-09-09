@@ -40,12 +40,12 @@ conda install -c conda-forge tabula-py
    ```
  Pada Sharing Session kali ini kita menggunan beberapa Library python yaitu 
  
- `Pandas` Untuk Penanganan Data
+* `Pandas` Untuk Penanganan Data
  
- `tabula` Untuk Crawling Data dari pdf
+* `tabula` Untuk Crawling Data dari pdf
  
- `glob`   Untuk Mengambil File dari Direktori
+* `glob`   Untuk Mengambil File dari Direktori
  
- `os`     Untuk Menjalankan Perintah operating system pada python
+* `os`     Untuk Menjalankan Perintah operating system pada python
 
 ## 2. Cleaning and Formatting Data
