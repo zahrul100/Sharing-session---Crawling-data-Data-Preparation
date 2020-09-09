@@ -108,18 +108,49 @@ Seringkali raw data yang diterima seorang Data Scientist tidak dapat langsung di
 Berikut ini contoh cleansing dan formating data Pulau Kalimantan yang terdiri dari (Kalimantan Barat, Kalimantan Tengah, Kalimantan Selatan, Kalimantan Timur, dan Kalimantan Utara)
 Berikut ini untuk script cleansing menggunakan python :
 
-1. ```import pandas as pd,numpy as np,glob```
-
+```import pandas as pd,numpy as np,glob```
    Keterangan :
 
    * ```import pandas as pd ```:  mengimport library pandas as pd terlebih dahulu (pandas untuk membersihkan data mentah ke bentuk data yang dapat diolah)
    * ```import numpy as np ```: mengimport library numpy as pd terlebih dahulu (numpy untuk mengubah python ke pemodelan ilmiah)
    * ```import glob``` : mengimport library glob terlebih dahulu (glob untuk mengambil file dari direktory)
 
-2. ```provinsi = "Nusa Tenggara Timur"```
+```provinsi = "Bali"```
    Untuk menyimpan nama kolom pada provinsi 
 
-3. 
+```df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')```
+   Keterangan :
+   
+   * ```pd.read_csv``` : untuk membaca file dengan format CSV dan mengkonversinya menjadi pandas Dataframe
+   * ```sep='``` : parameter sep=',' sesuai separator pada file
+   
+```df.head(n)```
+   Untuk mendapatkan n baris data teratas; jika tidak diisi n maka secara random n=6 
+   
+```df['kabupaten'] = df['kabupaten'].fillna(method='ffill')
+   df['kecamatan'] = df['kecamatan'].fillna(method='ffill')
+   ```
+ Keterangan :
+   * fillna untuk mengganti setiap NaN dengan nilai non -NaN pertama pada kolom yang sama di atasnya.
+   
+ ```df = df[df['id_kelurahan'].str.len() >10]```
+   Keterangan :
+   * ```str.len()``` untuk mendapatkan jumlah panjang sebuah string
+   
+ ```df['desa'] = df['desa'].str.replace('\r\d+', '')
+df['kelurahan'] = df['kelurahan'].str.replace('\r\d+', '')
+df['kecamatan'] = df['kecamatan'].str.replace('\r\d+', '')
+df['kabupaten'] = df['kabupaten'].str.replace('\r\d+', '')
+   ```
+   Keterangan :
+   * ```str.replace ('\r\d+', '')``` untuk mengubah "\r" setelah integer (dimana \d+ adalah regex untuk nomor integer)
+   
+ ```df['provinsi'] = provinsi```
+   untuk memasukkan kolom provinsi ke dalam variable
+   
+ ```df['keterangan'] = np.where(df['kelurahan'].isnull(), 'desa', 'kelurahan')```
+   Keterangan :
+   * ```np.where``` adalah  
 
 
 
