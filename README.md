@@ -85,6 +85,17 @@ maka kira merename dan menata ulang column menggunakan pandas
 ![component](gambar/8.jpeg)
 
 Ouput akan seperti berikut
+![component](gambar/9new.jpeg)
+
+Karena Masih ada id_kelurahan yang masih null,
+maka kita perlu melakukan filter pada menggunakan pandas
+![component](gambar/10.jpeg)
+
+Dan selanjutnya adalah tahap terakhir yaitu export ke csv
+![component](gambar/11.jpeg)
+
+output akan seperti berikut
+![component](gambar/outputpdf.jpeg)
 
 
 
