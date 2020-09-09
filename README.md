@@ -66,7 +66,17 @@ pada case ini output dari file csv per page disimpan didalam direktori `E:\Magan
 
 ![component](gambar/2.jpeg)
 
+File Csv Per Page akan tersimpan di direktori `E:\Magang/new/bali/` ,Maka Langkah Selanjutnya adalah menggabungkan
+file csv tersebut menjadi 1.
+Disini kita perlu menyimpan terlebih dahulu semua nama csv yang ada dalam direketori dengan menggunakan library *glob*
 
+![component](gambar/3.jpeg)
+
+Selanjutnya kita membuka file csv tersebut dan menyimpannya dalam sebuah array.
+yang lalu akan disatukan menggunakan library pada pandas yaitu concat
+![component](gambar/4.jpeg)
+Berikut adalah output table yang disatukan 
+![component](gambar/5.jpeg)
 
 
 ## 2. Cleaning and Formatting Data
