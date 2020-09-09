@@ -30,6 +30,8 @@ conda install -c conda-forge tabula-py
   - [2. Cleaning and Formatting Data](#2-Cleaning-and-Formatting-Data)
   
 ## 1. Crawling From PDF
+Pada Sharing Session kali ini kita akan membahas tentan Crawling Data dengan sumber table dari pdf 
+kedalam Format Csv
 ### Library
    ```python3 
    import pandas
