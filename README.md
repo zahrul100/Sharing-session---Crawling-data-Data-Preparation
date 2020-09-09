@@ -30,6 +30,18 @@ conda install -c conda-forge tabula-py
   - [2. Cleaning and Formatting Data](#2-Cleaning-and-Formatting-Data)
   
 ## 1. Crawling From PDF
-### TOOLS
+### Library
+   ```python3 
+   import pandas
+   import tabula
+   import glob
+   import os
+   
+   ```
+ Pada Sharing Session kali ini kita menggunan beberapa Library python yaitu 
+ `Pandas` Untuk Penanganan Data
+ `tabula` Untuk Crawling Data dari pdf
+ `glob`   Untuk Mengambil File dari Direktori
+ `os`     Untuk Menjalankan Perintah operating system pada python
 
 ## 2. Cleaning and Formatting Data
