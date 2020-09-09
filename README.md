@@ -115,8 +115,8 @@ Data cleansing sangat diperlukan untuk menjaga akurasi data dan memberikan hasil
 
 Berikut ini contoh cleansing dan formating data Pulau Kalimantan yang terdiri dari (Kalimantan Barat, Kalimantan Tengah, Kalimantan Selatan, Kalimantan Timur, dan Kalimantan Utara)
 Berikut ini untuk script cleansing menggunakan python :
-```import pandas as pd,numpy as np,glob
-```
+```import pandas as pd,numpy as np,glob```
+
 Keterangan :
 
 * ```import pandas as pd ```: pandas adalah librari analisis data yang memiliki struktur data yang kita perlukan untuk membersihkan data mentah ke dalam sebuah bentuk yang cocok untuk analisis (yaitu tabel sehingga kita perlu mengimport library pandas sebagai pd terlebih dahulu
