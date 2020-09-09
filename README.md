@@ -75,8 +75,17 @@ Disini kita perlu menyimpan terlebih dahulu semua nama csv yang ada dalam direke
 Selanjutnya kita membuka file csv tersebut dan menyimpannya dalam sebuah array.
 yang lalu akan disatukan menggunakan library pada pandas yaitu concat
 ![component](gambar/4.jpeg)
-Berikut adalah output table yang disatukan 
+
+Berikut adalah output table yang disatukan
 ![component](gambar/5.jpeg)
+
+Setelah terconvert nama column akan berantakan dan tidak urut,
+maka kira merename dan menata ulang column menggunakan pandas
+![component](gambar/6.jpeg)
+![component](gambar/8.jpeg)
+
+Ouput akan seperti berikut
+
 
 
 ## 2. Cleaning and Formatting Data
