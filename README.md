@@ -108,13 +108,20 @@ Seringkali raw data yang diterima seorang Data Scientist tidak dapat langsung di
 Berikut ini contoh cleansing dan formating data Pulau Kalimantan yang terdiri dari (Kalimantan Barat, Kalimantan Tengah, Kalimantan Selatan, Kalimantan Timur, dan Kalimantan Utara)
 Berikut ini untuk script cleansing menggunakan python :
 
-```import pandas as pd,numpy as np,glob```
+1. ```import pandas as pd,numpy as np,glob```
 
 Keterangan :
 
 * ```import pandas as pd ```:  mengimport library pandas as pd terlebih dahulu (pandas untuk membersihkan data mentah ke bentuk data yang dapat diolah)
 * ```import numpy as np ```: mengimport library numpy as pd terlebih dahulu (numpy untuk mengubah python ke pemodelan ilmiah)
 * ```import glob``` : mengimport library glob terlebih dahulu (glob untuk mengambil file dari direktory)
+
+2. ```provinsi = "Nusa Tenggara Timur"```
+Untuk menyimpan nama kolom pada provinsi 
+
+3. 
+
+
 
 
 
