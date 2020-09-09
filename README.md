@@ -27,3 +27,8 @@ conda install -c conda-forge tabula-py
   - [1. Crawling From PDF](#1-shell-scripting)
   
   - [2. Cleaning and Formatting Data](#1-shell-scripting)
+  
+## 1. Crawling From PDF
+
+
+## 2. Cleaning and Formatting Data
