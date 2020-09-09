@@ -94,6 +94,7 @@ maka kita perlu melakukan filter pada menggunakan pandas
 ![component](gambar/10.jpeg)
 
 Dan selanjutnya adalah tahap terakhir yaitu export ke csv
+
 ![component](gambar/11.jpeg)
 
 output akan seperti berikut
