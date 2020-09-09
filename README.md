@@ -95,6 +95,7 @@ Dan selanjutnya adalah tahap terakhir yaitu export ke csv
 ![component](gambar/11.jpeg)
 
 output akan seperti berikut
+
 ![component](gambar/outputpdf.jpeg)
 
 
