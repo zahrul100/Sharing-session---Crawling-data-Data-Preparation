@@ -105,23 +105,16 @@ output akan seperti berikut
 
 ## 2. Cleansing and Formatting Data
 Seringkali raw data yang diterima seorang Data Scientist tidak dapat langsung digunakan untuk modelling, untuk tipe data seperti ini maka diperlukan tahap pre-processing; salah satunya adalah data cleansing.
-Proses data cleansing meliputi :
-- Memperbaiki missing value
-- Modifikasi format data
-- Menghilangkan duplikasi dalam data
-- Menghilangkan delimiter, simbol, white space, dan sebagainya.
-
-Data cleansing sangat diperlukan untuk menjaga akurasi data dan memberikan hasil analisis yang valid, jika kita tanpa menggunakan tahap ini bisa mengakibatkan predictive analysis yang kita buat hasilnya akan meleset karena data tersebut tidak akurat.
-
 Berikut ini contoh cleansing dan formating data Pulau Kalimantan yang terdiri dari (Kalimantan Barat, Kalimantan Tengah, Kalimantan Selatan, Kalimantan Timur, dan Kalimantan Utara)
 Berikut ini untuk script cleansing menggunakan python :
+
 ```import pandas as pd,numpy as np,glob```
 
 Keterangan :
 
-* ```import pandas as pd ```: pandas adalah librari analisis data yang memiliki struktur data yang kita perlukan untuk membersihkan data mentah ke dalam sebuah bentuk yang cocok untuk analisis (yaitu tabel sehingga kita perlu mengimport library pandas sebagai pd terlebih dahulu
-* ```import numpy as np ```: numpy adalah librari yang dapat mengubah Python menjadi alat analisis dan pemodelan ilmiah yang kuat, sehingga kita perlu mengimport library numpy as pd terlebih dahulu
-* ```import glob```
+* ```import pandas as pd ```:  mengimport library pandas as pd terlebih dahulu (pandas untuk membersihkan data mentah ke bentuk data yang dapat diolah)
+* ```import numpy as np ```: mengimport library numpy as pd terlebih dahulu (numpy untuk mengubah python ke pemodelan ilmiah)
+* ```import glob``` : mengimport library glob terlebih dahulu (glob untuk mengambil file dari direktory)
 
 
 
