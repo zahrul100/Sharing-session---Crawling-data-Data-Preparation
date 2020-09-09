@@ -57,29 +57,12 @@ kedalam Format Csv
 
 Pada tahapan pertama yang dilakukan adalah inisiasi variabel page yang ingin dicetak dan
 pembuatan direktori untuk menyimpan hasil output
- ```python3 
-namaprovinsi = "bali" #nama provinsi
-pagestart = 1 #page awal target cetak
-pageend = 25 #page akhir target cetak
 
-if not os.path.exists('E:\Magang/new/'+namaprovinsi): #melakukan create direktori untuk output data
-    os.makedirs('E:\Magang/new/'+namaprovinsi)
-    
-```
-
+![component](gambar/1.jpeg)
 
 Setelah Direktori dibuat tahap selanjutnya adalah melakukan convert dari pdf ke csv page per page
 pada case ini output dari file csv per page disimpan didalam direktori `E:\Magang/new/bali/`
 
-```python3 
-for x in range(pageend-pagestart+1):
-    df = tabula.read_pdf("E:\Magang/new/bali.pdf", encoding='utf-8', spreadsheet=True, pages=pagestart+x)
-    df.to_csv('E:\Magang/new/'+namaprovinsi+"/page"+str(pagestart+x)+'.csv', encoding='utf-8',index = False)
-    print("Export page -----> "+str(pagestart+x))
-
-print("export ke csv selesai")
-    
-```
 
 ![component](gambar/2.jpeg)
 
