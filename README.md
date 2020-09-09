@@ -81,10 +81,12 @@ Berikut adalah output table yang disatukan
 
 Setelah terconvert nama column akan berantakan dan tidak urut,
 maka kira merename dan menata ulang column menggunakan pandas
+
 ![component](gambar/6.jpeg)
 ![component](gambar/8.jpeg)
 
 Ouput akan seperti berikut
+
 ![component](gambar/9new.jpeg)
 
 Karena Masih ada id_kelurahan yang masih null,
