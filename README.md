@@ -119,9 +119,9 @@ Berikut ini untuk script cleansing menggunakan python :
 ```
 Keterangan :
 
-* import pandas as pd : pandas adalah librari analisis data yang memiliki struktur data yang kita perlukan untuk membersihkan data mentah ke dalam sebuah bentuk yang cocok untuk analisis (yaitu tabel sehingga kita perlu mengimport library pandas sebagai pd terlebih dahulu
-* import numpy as np : numpy adalah librari yang dapat mengubah Python menjadi alat analisis dan pemodelan ilmiah yang kuat, sehingga kita perlu mengimport library numpy as pd terlebih dahulu
-* import glob
+* ```import pandas as pd ```: pandas adalah librari analisis data yang memiliki struktur data yang kita perlukan untuk membersihkan data mentah ke dalam sebuah bentuk yang cocok untuk analisis (yaitu tabel sehingga kita perlu mengimport library pandas sebagai pd terlebih dahulu
+* ```import numpy as np ```: numpy adalah librari yang dapat mengubah Python menjadi alat analisis dan pemodelan ilmiah yang kuat, sehingga kita perlu mengimport library numpy as pd terlebih dahulu
+* ```import glob```
 
 
 
