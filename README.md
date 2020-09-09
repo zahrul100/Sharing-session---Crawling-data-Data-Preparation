@@ -53,5 +53,20 @@ kedalam Format Csv
 * `glob`   Untuk Mengambil File dari Direktori
 * `os`     Untuk Menjalankan Perintah operating system pada python
 
+### Source Code
+
+ ```python3 
+namaprovinsi = "bali"
+pagestart = 1
+pageend = 25
+
+if not os.path.exists('E:\Magang/new/'+namaprovinsi):
+    os.makedirs('E:\Magang/new/'+namaprovinsi)
+    
+```
+Pada tahapan pertama yang dilakukan adalah inisiasi variabel page yang ingin dicetak dan
+pembuatan direktori untuk menyimpan hasil output
+
+
 
 ## 2. Cleaning and Formatting Data
