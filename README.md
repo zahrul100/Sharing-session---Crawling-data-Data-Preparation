@@ -111,6 +111,8 @@ Proses data cleansing meliputi :
 - Menghilangkan duplikasi dalam data
 - Menghilangkan delimiter, simbol, white space, dan sebagainya.
 
+Data cleansing sangat diperlukan untuk menjaga akurasi data dan memberikan hasil analisis yang valid, jika kita tanpa menggunakan tahap ini bisa mengakibatkan predictive analysis yang kita buat hasilnya akan meleset karena data tersebut tidak akurat.
+
 
 
 
