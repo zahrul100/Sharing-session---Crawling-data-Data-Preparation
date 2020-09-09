@@ -117,25 +117,33 @@ import pandas as pd,numpy as np,glob
    * ```import numpy as np ```: mengimport library numpy as pd terlebih dahulu (numpy untuk mengubah python ke pemodelan ilmiah)
    * ```import glob``` : mengimport library glob terlebih dahulu (glob untuk mengambil file dari direktory)
 
-```provinsi = "Bali"```
+```
+provinsi = "Bali"
+```
    Untuk menyimpan nama kolom pada provinsi 
 
-```df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')```
+```
+df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')
+```
    Keterangan :
    
    * ```pd.read_csv``` : untuk membaca file dengan format CSV dan mengkonversinya menjadi pandas Dataframe
    * ```sep='``` : parameter sep=',' sesuai separator pada file
    
-```df.head(n)```
+```
+df.head(n)
+```
    Untuk mendapatkan n baris data teratas; jika tidak diisi n maka secara random n=6 
    
 ```df['kabupaten'] = df['kabupaten'].fillna(method='ffill')
    df['kecamatan'] = df['kecamatan'].fillna(method='ffill')
-   ```
+```
  Keterangan :
    * fillna untuk mengganti setiap NaN dengan nilai non -NaN pertama pada kolom yang sama di atasnya.
    
- ```df = df[df['id_kelurahan'].str.len() >10]```
+ ```
+ df = df[df['id_kelurahan'].str.len() >10]
+ ```
    Keterangan :
    * ```str.len()``` untuk mendapatkan jumlah panjang sebuah string
    
@@ -147,12 +155,46 @@ df['kabupaten'] = df['kabupaten'].str.replace('\r\d+', '')
    Keterangan :
    * ```str.replace ('\r\d+', '')``` untuk mengubah "\r" setelah integer (dimana \d+ adalah regex untuk nomor integer)
    
- ```df['provinsi'] = provinsi```
+ ```
+ df['provinsi'] = provinsi
+ ```
    untuk memasukkan kolom provinsi ke dalam variable
    
- ```df['keterangan'] = np.where(df['kelurahan'].isnull(), 'desa', 'kelurahan')```
+ ```
+ df['keterangan'] = np.where(df['kelurahan'].isnull(), 'desa', 'kelurahan')
+ ```
    Keterangan :
-   * ```np.where``` adalah  
+   * ```np.where``` atau numpy.where adalah suatu kondisi mendapatkan entri dalam array yang memenuhi kondisi
+   * ```isnull()``` adalah argumen ekspresi yang diperlukan adalah varian yang berisi ekpresi numerik atau ekspresi string.
+   
+```df = df.rename(columns={"id_kelurahan":"id_dukcapil","kabupaten":"kabupaten_kota"})
+```
+   Keterangan :
+   * ```df.rename()``` untuk mengubah nama pada kolom tertentu (bisa lebih dari 1)
+   
+ ```df['id_prov'] = df['id_dukcapil'].str.split('.').str[:1]
+df['id_kab'] = df['id_dukcapil'].str.split('.').str[:2]
+df['id_kec'] = df['id_dukcapil'].str.split('.').str[:3]
+df['id_kel'] = df['id_dukcapil'].str.split('.').str[:4]
+```
+   Keterangan :
+   * ```str.split(.)``` untuk memisahkan string di sekitar separator atau pembatas; disini separator berupa tanda "."
+   * ```str[:n]``` untuk  mengekstrak seluruh sekuensi string dari awal sampai ke-n 
+      contoh :
+      ```[start:]``` akan mengekstrak sekuensi string mulai pada index start hingga akhir
+      
+```
+      
+      
+      
+   
+```df['id_prov'] = df['id_prov'].str.join('') 
+df['id_kab'] = df['id_kab'].str.join('') 
+df['id_kec'] = df['id_kec'].str.join('') 
+df['id_kel'] = df['id_kel'].str.join('') 
+```
+   Keterangan :
+   
 
 
 
