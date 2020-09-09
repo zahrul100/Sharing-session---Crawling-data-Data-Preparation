@@ -37,6 +37,7 @@ kedalam Format Csv
 * **Output**
 
 ![component](gambar/outputpdf.jpeg)
+### Tahapan Eksekusi
 ### Library
    ```python3 
    import pandas
@@ -51,6 +52,6 @@ kedalam Format Csv
 * `tabula` Untuk Crawling Data dari pdf
 * `glob`   Untuk Mengambil File dari Direktori
 * `os`     Untuk Menjalankan Perintah operating system pada python
-### Tahapan Eksekusi
+
 
 ## 2. Cleaning and Formatting Data
