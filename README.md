@@ -4,7 +4,7 @@
 # Crawling-data-Data-Preparation
 
 
-## Prasayarat
+## Requirement
 1. Menginstall [ Anaconda3 ](https://docs.anaconda.com/anaconda/install/windows/) / Jupyter notebook
 2. Menginstal Library Berikut Pada Anaconda Prompt
  -Pandas
