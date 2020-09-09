@@ -33,7 +33,7 @@ conda install -c conda-forge tabula-py
 Pada Sharing Session kali ini kita akan membahas tentan Crawling Data dengan sumber table dari pdf 
 kedalam Format Csv
 * **Input**
-![component](gambar/inputpdf.jpeg)
+![component](gambar/inputspdf.jpeg)
 * **Output**
 
 ![component](gambar/outputpdf.jpeg)
