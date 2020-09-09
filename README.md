@@ -5,5 +5,5 @@
 
 
 ## Prasayarat
-1. Menginstall [ Anaconda3 ](https://github.com/raldokusuma/modul-pengenalan-CLI) / Jupyter notebook
+1. Menginstall [ Anaconda3 ](https://docs.anaconda.com/anaconda/install/windows/) / Jupyter notebook
 2. 
