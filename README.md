@@ -180,20 +180,49 @@ df['id_kel'] = df['id_dukcapil'].str.split('.').str[:4]
    Keterangan :
    * ```str.split(.)``` untuk memisahkan string di sekitar separator atau pembatas; disini separator berupa tanda "."
    * ```str[:n]``` untuk  mengekstrak seluruh sekuensi string dari awal sampai ke-n 
+      
       contoh :
       ```[start:]``` akan mengekstrak sekuensi string mulai pada index start hingga akhir
-      
-```
-      
-      
-      
-   
+
 ```df['id_prov'] = df['id_prov'].str.join('') 
 df['id_kab'] = df['id_kab'].str.join('') 
 df['id_kec'] = df['id_kec'].str.join('') 
 df['id_kel'] = df['id_kel'].str.join('') 
 ```
    Keterangan :
+   * ```str.join()``` untuk  mengembalikan string di mana elemen urutan telah bergabung dengan pemisah atau separator str; disini kami menggunakan pembatas ('')
+   
+```
+df['kelurahan_desa']=np.where(df['kelurahan'].isnull(), df['desa'], df['kelurahan'])
+```
+   keterangan :
+   * ```np.where(kondisi,benar,salah)
+   * artinya jika kolom kelurahan berisi nilai null artinya "true" maka kolom kelurahan berisi data yang ada di kolom desa, tetapi jika "false" atau data tidak berisi null maka kolom kelurahan berisi data yang ada di kolom kelurahan.
+   
+```del df['kelurahan']
+del df['desa']
+```
+   Keterangan : 
+   * ```perintah del df []``` untuk menghapus kolom; disini perintah tersebut untuk menghapus kolom kelurahan dan desa
+   
+```columnsTitles = ['id_dukcapil', 'id_prov', 'id_kab','id_kec','id_kel','provinsi','kabupaten_kota','kecamatan','kelurahan_desa','keterangan']
+```
+   Keterangan :
+   * ```ColumnsTitles``` berfungsi untuk mengambil nama kolom yang mau diambil sesuai kebutuhan kita.
+ 
+ ```
+ df = df.reindex(columns=columnsTitles)
+ ```
+   keterangan :
+   * ```df.reindex()``` berfungsi untuk proses membuat ulang index pada tabel berdasarkan data yang terdapat dalam tabel
+   
+```
+df.to_csv('E:\Magang/sprint/outputprov_'+provinsi+'.csv', index=False)
+```  
+   Keterangan : menyimpan 
+
+
+
    
 
 
