@@ -6,7 +6,9 @@
 
 ## Requirement
 1. Menginstall [ Anaconda3 ](https://docs.anaconda.com/anaconda/install/windows/) / Jupyter notebook
+
 2. [ File PDF Untuk Crawling  ](https://drive.google.com/file/d/1gcnAAHPgjZqSc20yw22m9U7Hejr2mpN0/view?usp=sharing)
+
 3. Menginstal Library Berikut Pada Anaconda Prompt
    
  * **Pandas** 
