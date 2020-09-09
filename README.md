@@ -104,3 +104,13 @@ output akan seperti berikut
 
 
 ## 2. Cleaning and Formatting Data
+Seringkali raw data yang diterima seorang Data Scientist tidak dapat langsung digunakan untuk modelling, untuk tipe data seperti ini paka diperlukan tahap pre-processing; salah satunya adalah data cleansing.
+Proses data cleansing meliputi :
+- Memperbaiki missing value
+- Modifikasi format data
+- Menghilangkan duplikasi dalam data
+- Menghilangkan delimiter, simbol, white space, dan sebagainya.
+
+
+
+
