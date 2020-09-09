@@ -109,7 +109,9 @@ Berikut ini contoh cleansing dan formating data Pulau Bali
 sBerikut ini untuk script cleansing menggunakan python :
 
 ```
-import pandas as pd,numpy as np,glob
+import pandas as pd
+import numpy as np,
+import glob
 ```
    Keterangan :
 
