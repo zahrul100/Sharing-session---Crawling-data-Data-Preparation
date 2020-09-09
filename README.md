@@ -20,6 +20,7 @@
 ``` 
 conda install -c conda-forge tabula-py 
 ```
+3. [ File PDF Untuk Crawling  ](https://drive.google.com/file/d/1gcnAAHPgjZqSc20yw22m9U7Hejr2mpN0/view?usp=sharing)
 ## Daftar Isi
   - [1. Crawling From PDF](#1-shell-scripting)
   
