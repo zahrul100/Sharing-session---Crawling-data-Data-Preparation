@@ -150,6 +150,7 @@ df.head()
  Keterangan :
    * fillna untuk mengganti setiap NaN dengan nilai non -NaN pertama pada kolom yang sama di atasnya.
    * Output :
+   
      <img width="348" alt="3" src="https://user-images.githubusercontent.com/36990780/92689832-f7a32000-f369-11ea-8311-81757974f550.PNG">
  
  ```
@@ -157,8 +158,8 @@ df.head()
  ```
    Keterangan :
    * ```str.len()``` untuk mendapatkan jumlah panjang sebuah string
+   * Output :
    
-   Output :
       <img width="385" alt="4" src="https://user-images.githubusercontent.com/36990780/92689967-42bd3300-f36a-11ea-937e-0178f35b342e.PNG">
    
  ```
@@ -169,16 +170,18 @@ df.head()
  ```
    Keterangan :
    * ```str.replace ('\r\d+', '')``` untuk mengubah "\r" setelah integer (dimana \d+ adalah regex untuk nomor integer)
-   
-   Output :
+   * Output :
+      
       <img width="362" alt="5" src="https://user-images.githubusercontent.com/36990780/92690122-94fe5400-f36a-11ea-9675-130c0d912c2a.PNG">
      
  ```
  df['provinsi'] = provinsi
  ```
-   untuk memasukkan kolom provinsi ke dalam variable
+   Keterangan :
+   * untuk memasukkan kolom provinsi ke dalam variable
    
-   Output :
+   * Output :
+      
       <img width="399" alt="6" src="https://user-images.githubusercontent.com/36990780/92690199-c5de8900-f36a-11ea-82fd-1f819e66ab8a.PNG">
       
  ```
@@ -187,8 +190,8 @@ df.head()
    Keterangan :
    * ```np.where``` atau numpy.where adalah suatu kondisi mendapatkan entri dalam array yang memenuhi kondisi
    * ```isnull()``` adalah argumen ekspresi yang diperlukan adalah varian yang berisi ekpresi numerik atau ekspresi string.
-   
-   Output :
+   * Output :
+      
       <img width="455" alt="7" src="https://user-images.githubusercontent.com/36990780/92690319-fc1c0880-f36a-11ea-806c-d1bc4e606679.PNG">
    
 ```
@@ -197,7 +200,8 @@ df = df.rename(columns={"id_kelurahan":"id_dukcapil","kabupaten":"kabupaten_kota
    Keterangan :
    * ```df.rename()``` untuk mengubah nama pada kolom tertentu (bisa lebih dari 1)
    
-   Output :
+   * Output :
+      
       <img width="455" alt="8" src="https://user-images.githubusercontent.com/36990780/92690393-253c9900-f36b-11ea-9d67-3e2163d39ea0.PNG">
       
  ```
@@ -209,11 +213,8 @@ df['id_kel'] = df['id_dukcapil'].str.split('.').str[:4]
    Keterangan :
    * ```str.split(.)``` untuk memisahkan string di sekitar separator atau pembatas; disini separator berupa tanda "."
    * ```str[:n]``` untuk  mengekstrak seluruh sekuensi string dari awal sampai ke-n 
-   
-   Contoh :
-   ```[start:]``` akan mengekstrak sekuensi string mulai pada index start hingga akhir
-   
-   Output :
+   * Output :
+      
       <img width="647" alt="9" src="https://user-images.githubusercontent.com/36990780/92690788-c88dae00-f36b-11ea-9e45-75c8daf56834.PNG">
 
 ```
@@ -224,8 +225,8 @@ df['id_kel'] = df['id_kel'].str.join('')
 ```
    Keterangan :
    * ```str.join()``` untuk  mengembalikan string di mana elemen urutan telah bergabung dengan pemisah atau separator str; disini kami menggunakan pembatas ('')
-   
-   Output :
+   * Output :
+      
       <img width="610" alt="10" src="https://user-images.githubusercontent.com/36990780/92690897-eeb34e00-f36b-11ea-97a0-977350475ee3.PNG">
       
 ```
@@ -234,8 +235,8 @@ df['kelurahan_desa']=np.where(df['kelurahan'].isnull(), df['desa'], df['keluraha
    keterangan :
    * ```np.where(kondisi,benar,salah)
    * artinya jika kolom kelurahan berisi nilai null artinya "true" maka kolom kelurahan berisi data yang ada di kolom desa, tetapi jika "false" atau data tidak berisi null maka kolom kelurahan berisi data yang ada di kolom kelurahan.
-  
-  Output :
+   * Output :
+      
       <img width="680" alt="11" src="https://user-images.githubusercontent.com/36990780/92691005-1d312900-f36c-11ea-8c52-2023847e17c2.PNG">
       
 ```
@@ -244,8 +245,8 @@ del df['desa']
 ```
    Keterangan : 
    * ```perintah del df []``` untuk menghapus kolom; disini perintah tersebut untuk menghapus kolom kelurahan dan desa
-   
-   Output :
+   * Output :
+      
       <img width="584" alt="12" src="https://user-images.githubusercontent.com/36990780/92691114-4651b980-f36c-11ea-9867-0047d4fe7293.PNG">
    
 ```
@@ -259,16 +260,15 @@ columnsTitles = ['id_dukcapil', 'id_prov', 'id_kab','id_kec','id_kel','provinsi'
  ```
    keterangan :
    * ```df.reindex()``` berfungsi untuk proses membuat ulang index pada tabel berdasarkan data yang terdapat dalam tabel
+   * Output :
    
-   Output :
       <img width="600" alt="13" src="https://user-images.githubusercontent.com/36990780/92691314-96c91700-f36c-11ea-9cd9-0a5c413c5b3a.PNG">
    
 ```
 df.to_csv('E:\Magang/sprint/outputprov_'+provinsi+'.csv', index=False)
 ```
-   Keterangan : menyimpan
-   
-   Output :
+   Keterangan : 
+   * untuk menyimpan data frame dalam bentuk csv dan disimpan ke direktori kita
       <img width="458" alt="14" src="https://user-images.githubusercontent.com/36990780/92691551-ee678280-f36c-11ea-9312-eef618f2b4f2.PNG">
 
 
