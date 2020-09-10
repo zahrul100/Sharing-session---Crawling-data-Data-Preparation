@@ -141,17 +141,16 @@ df.head()
    Keterangan :
    * Untuk mendapatkan n baris data teratas; jika tidak diisi n maka secara random n=6 
    
-   Output :
-   <img width="342" alt="2" src="https://user-images.githubusercontent.com/36990780/92689707-b3b01b00-f369-11ea-8a3d-4ad663e7f6fb.PNG">
+   * Output :
+      <img width="342" alt="2" src="https://user-images.githubusercontent.com/36990780/92689707-b3b01b00-f369-11ea-8a3d-4ad663e7f6fb.PNG">
    
 ```df['kabupaten'] = df['kabupaten'].fillna(method='ffill')
    df['kecamatan'] = df['kecamatan'].fillna(method='ffill')
 ```
  Keterangan :
    * fillna untuk mengganti setiap NaN dengan nilai non -NaN pertama pada kolom yang sama di atasnya.
- 
- Output :
-   <img width="348" alt="3" src="https://user-images.githubusercontent.com/36990780/92689832-f7a32000-f369-11ea-8311-81757974f550.PNG">
+   * Output :
+     <img width="348" alt="3" src="https://user-images.githubusercontent.com/36990780/92689832-f7a32000-f369-11ea-8311-81757974f550.PNG">
  
  ```
  df = df[df['id_kelurahan'].str.len() >10]
