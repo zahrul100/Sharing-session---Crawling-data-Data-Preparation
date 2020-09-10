@@ -162,9 +162,11 @@ Seringkali raw data yang diterima seorang Data Scientist tidak dapat langsung di
 Berikut ini contoh cleansing dan formating data Pulau Bali dengan hasil crawling sebagai berikut [ File Csv untuk Pulau Bali  ](https://drive.google.com/file/d/1nFHnrPCmEQhEuFcRavMP0HkbilYNuPQK/view?usp=sharing)
 
 * Input :
+
    <img width="423" alt="15" src="https://user-images.githubusercontent.com/36990780/92756928-72def300-f3b7-11ea-947b-7f752485185d.PNG">
      
 * Output :
+
    <img width="960" alt="16" src="https://user-images.githubusercontent.com/36990780/92757046-8f7b2b00-f3b7-11ea-97bb-a08231016bcc.PNG">
    
 Berikut ini untuk script cleansing menggunakan python :
