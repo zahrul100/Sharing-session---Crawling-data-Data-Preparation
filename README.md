@@ -309,7 +309,7 @@ del df['desa']
 columnsTitles = ['id_dukcapil', 'id_prov', 'id_kab','id_kec','id_kel','provinsi','kabupaten_kota','kecamatan','kelurahan_desa','keterangan']
 ```
    Keterangan :
-   * ```ColumnsTitles``` berfungsi untuk mengambil nama kolom yang mau diambil sesuai kebutuhan kita.
+   * ```ColumnsTitles``` berfungsi untuk menyimpan nama kolom yang mau diambil sesuai kebutuhan kita.
  
  ```python3
  df = df.reindex(columns=columnsTitles)
