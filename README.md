@@ -167,7 +167,7 @@ df.head()
  df['kabupaten'] = df['kabupaten'].str.replace('\r\d+', '')
  ```
    Keterangan :
-   * ```str.replace ('\r\d+', '')``` untuk mengubah "\r" setelah integer (dimana \d+ adalah regex untuk nomor integer)
+   * ```str.replace ('\r\d+', '')``` untuk mengganti '\r' dan '\d+' dengan karakter lain menjadi ''(dimana \d+ adalah regex untuk nomor integer)
    * Output :
       
       <img width="362" alt="5" src="https://user-images.githubusercontent.com/36990780/92690122-94fe5400-f36a-11ea-9675-130c0d912c2a.PNG">
