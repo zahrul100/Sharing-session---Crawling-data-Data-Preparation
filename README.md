@@ -1,8 +1,5 @@
 
-# Sharing-session (Isna dan Zahrul)
-
-# Crawling-data-Data-Preparation
-
+# Sharing Session Crawling data dan Data Preparation
 
 ## Requirement
 1. Menginstall [ Anaconda3 ](https://docs.anaconda.com/anaconda/install/windows/) / Jupyter notebook
