@@ -183,7 +183,7 @@ provinsi = "Bali"
 
 
 ```
-df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')
+df = pd.read_csv("E:\Magang/bali.csv",sep=',')
 ```
    Keterangan :
    
