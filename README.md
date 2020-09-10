@@ -176,13 +176,11 @@ Berikut ini untuk script cleansing menggunakan python :
 ```
 import pandas as pd
 import numpy as np
-import glob
 ```
    Keterangan :
 
    * ```import pandas as pd ```:  mengimport library pandas as pd terlebih dahulu (pandas untuk membersihkan data mentah ke bentuk data yang dapat diolah)
    * ```import numpy as np ```: mengimport library numpy as pd terlebih dahulu (numpy untuk mengubah python ke pemodelan ilmiah)
-   * ```import glob``` : mengimport library glob terlebih dahulu (glob untuk mengambil file dari direktory)
 
 ```
 provinsi = "Bali"
