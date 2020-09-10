@@ -1,5 +1,5 @@
 
-## Sharing-session
+# Sharing-session (Isna dan Zahrul)
 
 # Crawling-data-Data-Preparation
 
@@ -234,7 +234,7 @@ df['id_kel'] = df['id_kel'].str.join('')
 df['kelurahan_desa']=np.where(df['kelurahan'].isnull(), df['desa'], df['kelurahan'])
 ```
    keterangan :
-   * ```np.where(kondisi,benar,salah)
+   * ```np.where(kondisi,benar,salah)```
    * artinya jika kolom kelurahan berisi nilai null artinya "true" maka kolom kelurahan berisi data yang ada di kolom desa, tetapi jika "false" atau data tidak berisi null maka kolom kelurahan berisi data yang ada di kolom kelurahan.
    * Output :
       
