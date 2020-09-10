@@ -142,6 +142,7 @@ df.head()
    * Untuk mendapatkan n baris data teratas; jika tidak diisi n maka secara random n=6 
    
    * Output :
+   
       <img width="342" alt="2" src="https://user-images.githubusercontent.com/36990780/92689707-b3b01b00-f369-11ea-8a3d-4ad663e7f6fb.PNG">
    
 ```df['kabupaten'] = df['kabupaten'].fillna(method='ffill')
