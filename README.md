@@ -137,7 +137,7 @@ df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')
 df.head()
 ```
    Keterangan :
-   * Untuk mendapatkan n baris data teratas; jika tidak diisi n maka secara random n=6 
+   * Untuk mendapatkan n baris data teratas; 
    * Output :
    
       <img width="342" alt="2" src="https://user-images.githubusercontent.com/36990780/92689707-b3b01b00-f369-11ea-8a3d-4ad663e7f6fb.PNG">
