@@ -24,7 +24,8 @@ conda install -c conda-forge tabula-py
 ## Daftar Isi
   - [1. Crawling From PDF](#1-Crawling-From-PDF)
   
-  - [2. Cleaning and Formatting Data](#2-cleansing-and-formatting-data)
+  - [2. Cleaning and Formatting Data](#2-Cleaning-and-Formatting-Data)
+  
 ## 1. Crawling From PDF
 Pada Sharing Session kali ini kita akan membahas tentan Crawling Data dengan sumber table dari pdf 
 kedalam Format Csv
@@ -53,12 +54,12 @@ kedalam Format Csv
 
 Pada tahapan pertama yang dilakukan adalah inisiasi variabel page yang ingin dicetak dan
 pembuatan direktori untuk menyimpan hasil output
-```python3
+```
 namaprovinsi = "bali"
 pagestart = 1
 pageend = 25
 ```
-```python3
+```
 if not os.path.exists('E:\Magang/new/'+namaprovinsi):
     os.makedirs('E:\Magang/new/'+namaprovinsi)
 ```
@@ -68,7 +69,7 @@ if not os.path.exists('E:\Magang/new/'+namaprovinsi):
 Setelah Direktori dibuat tahap selanjutnya adalah melakukan convert dari pdf ke csv page per page
 pada case ini output dari file csv per page disimpan didalam direktori `E:\Magang/new/bali/`
 
-```python3
+```
 for x in range(pageend-pagestart+1):
     df = tabula.read_pdf("E:\Magang/new/bali.pdf", encoding='utf-8', spreadsheet=True, pages=pagestart+x)
     df.to_csv('E:\Magang/new/'+namaprovinsi+"/page"+str(pagestart+x)+'.csv', encoding='utf-8',index = False)
@@ -91,39 +92,39 @@ all_files = glob.glob(path + "/*.csv")
 
 Selanjutnya kita membuka file csv tersebut dan menyimpannya dalam sebuah array.
 yang lalu akan disatukan menggunakan library pada pandas yaitu concat
-```python3
+```
 li = []
 ```
 
-```python3
+```
 for filename in all_files:
     df = pandas.read_csv(filename, index_col=None, header=0)
     li.append(df)
 ```
 
-```python3
+```
 frame = pandas.concat(li, axis=0)
 ```
 
 ![component](gambar/4.jpeg)
 
 Berikut adalah output table yang disatukan
-```python3
+```
 frame
 ```
 ![component](gambar/5.jpeg)
 
 Setelah terconvert nama column akan berantakan dan tidak urut,
 maka kira merename dan menata ulang column menggunakan pandas
-```python3
+```
 frame = frame.rename(columns={"K O D E":"id_kelurahan","NAMA PROVINSI /\rKABUPATEN / KOTA":"kabupaten","LUAS\rWILAYAH\r(Km2)":"kecamatan","JUMLAH\rPENDUDUK\r(Jiwa)":"kelurahan","K E T E R A N G A N":"desa",})
-```python3
+```
 
-```python3
+```
 kolomoutput = ['id_kelurahan', 'kabupaten', 'kecamatan','kelurahan','desa']
 ```
 
-```python3
+```
 frame = frame.reindex(columns=kolomoutput)
 ```
 
@@ -137,7 +138,7 @@ Ouput akan seperti berikut
 
 Karena Masih ada id_kelurahan yang masih null,
 maka kita perlu melakukan filter pada menggunakan pandas
-```python3
+```
 frame = frame[frame['id_kelurahan'].str.len() > 0]
 ```
 
@@ -145,7 +146,7 @@ frame = frame[frame['id_kelurahan'].str.len() > 0]
 
 Dan selanjutnya adalah tahap terakhir yaitu export ke csv
 
-```python3
+```
 frame.to_csv('E:\Magang/bali.csv', index=False,sep = ",")
 ```
 ![component](gambar/11.jpeg)
@@ -188,7 +189,7 @@ provinsi = "Bali"
 
 ## Membaca file csv
 ```
-df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')
+df = pd.read_csv("E:\Magang/Bali.csv",sep=',')
 ```
    Keterangan :
    
@@ -215,7 +216,7 @@ df.head()
    * fillna untuk mengganti setiap NaN dengan nilai non -NaN pertama pada kolom yang sama di atasnya.
    * Output :
    
-     <img width="348" alt="3" src="https://user-images.githubusercontent.com/36990780/92689832-f7a32000-f369-11ea-8311-81757974f550.PNG">
+     <img width="435" alt="19" src="https://user-images.githubusercontent.com/36990780/92843642-2a532400-f40f-11ea-9dfc-908def3aa116.PNG">
  
  ## Meyeleksi kolom kelurahan sesuai dengan output yang diminta 
  ```
@@ -225,14 +226,14 @@ df.head()
    * ```str.len()``` untuk mendapatkan jumlah panjang sebuah string
    * Output :
    
-      <img width="385" alt="4" src="https://user-images.githubusercontent.com/36990780/92689967-42bd3300-f36a-11ea-937e-0178f35b342e.PNG">
+      <img width="423" alt="20" src="https://user-images.githubusercontent.com/36990780/92843758-4bb41000-f40f-11ea-880f-a42d5e0bca46.PNG">
    
  ## Menghilangkan integer pada kolom desa, kelurahan, kecamatan dan kabupaten
  ```python3
- df['desa'] = df['desa'].str.replace('\d+', '')
- df['kelurahan'] = df['kelurahan'].str.replace('\d+', '')
- df['kecamatan'] = df['kecamatan'].str.replace('\d+', '')
- df['kabupaten'] = df['kabupaten'].str.replace('\d+', '')
+ df['desa'] = df['desa'].str.replace('\r\d+', '')
+ df['kelurahan'] = df['kelurahan'].str.replace('\r\d+', '')
+ df['kecamatan'] = df['kecamatan'].str.replace('\r\d+', '')
+ df['kabupaten'] = df['kabupaten'].str.replace('\r\d+', '')
  ```
    Keterangan :
    * ```str.replace ('\r\d+', '')``` untuk mengganti '\r' dan '\d+' dengan karakter lain menjadi ''(dimana \d+ adalah regex untuk nomor integer)
