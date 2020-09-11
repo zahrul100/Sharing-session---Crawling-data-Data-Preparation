@@ -10,13 +10,13 @@
 
 ### Cara Membuka Anaconda Promp : 
 
-Windows :
+### Windows :
 
 1.Click Start(Gambar Windows Pada Keyboard) 
 
 2.Ketik "Anaconda Prompt"
 
-macOS: 
+### macOS: 
 
 1.Buka Spotlight (Cmd+Space)
 
