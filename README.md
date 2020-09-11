@@ -54,12 +54,12 @@ kedalam Format Csv
 
 Pada tahapan pertama yang dilakukan adalah inisiasi variabel page yang ingin dicetak dan
 pembuatan direktori untuk menyimpan hasil output
-```
+```python3
 namaprovinsi = "bali"
 pagestart = 1
 pageend = 25
 ```
-```
+```python3
 if not os.path.exists('E:\Magang/new/'+namaprovinsi):
     os.makedirs('E:\Magang/new/'+namaprovinsi)
 ```
@@ -69,7 +69,7 @@ if not os.path.exists('E:\Magang/new/'+namaprovinsi):
 Setelah Direktori dibuat tahap selanjutnya adalah melakukan convert dari pdf ke csv page per page
 pada case ini output dari file csv per page disimpan didalam direktori `E:\Magang/new/bali/`
 
-```
+```python3
 for x in range(pageend-pagestart+1):
     df = tabula.read_pdf("E:\Magang/new/bali.pdf", encoding='utf-8', spreadsheet=True, pages=pagestart+x)
     df.to_csv('E:\Magang/new/'+namaprovinsi+"/page"+str(pagestart+x)+'.csv', encoding='utf-8',index = False)
@@ -92,39 +92,39 @@ all_files = glob.glob(path + "/*.csv")
 
 Selanjutnya kita membuka file csv tersebut dan menyimpannya dalam sebuah array.
 yang lalu akan disatukan menggunakan library pada pandas yaitu concat
-```
+```python3
 li = []
 ```
 
-```
+```python3
 for filename in all_files:
     df = pandas.read_csv(filename, index_col=None, header=0)
     li.append(df)
 ```
 
-```
+```python3
 frame = pandas.concat(li, axis=0)
 ```
 
 ![component](gambar/4.jpeg)
 
 Berikut adalah output table yang disatukan
-```
+```python3
 frame
 ```
 ![component](gambar/5.jpeg)
 
 Setelah terconvert nama column akan berantakan dan tidak urut,
 maka kira merename dan menata ulang column menggunakan pandas
-```
+```python3
 frame = frame.rename(columns={"K O D E":"id_kelurahan","NAMA PROVINSI /\rKABUPATEN / KOTA":"kabupaten","LUAS\rWILAYAH\r(Km2)":"kecamatan","JUMLAH\rPENDUDUK\r(Jiwa)":"kelurahan","K E T E R A N G A N":"desa",})
-```
+```python3
 
-```
+```python3
 kolomoutput = ['id_kelurahan', 'kabupaten', 'kecamatan','kelurahan','desa']
 ```
 
-```
+```python3
 frame = frame.reindex(columns=kolomoutput)
 ```
 
@@ -138,7 +138,7 @@ Ouput akan seperti berikut
 
 Karena Masih ada id_kelurahan yang masih null,
 maka kita perlu melakukan filter pada menggunakan pandas
-```
+```python3
 frame = frame[frame['id_kelurahan'].str.len() > 0]
 ```
 
@@ -146,7 +146,7 @@ frame = frame[frame['id_kelurahan'].str.len() > 0]
 
 Dan selanjutnya adalah tahap terakhir yaitu export ke csv
 
-```
+```python3
 frame.to_csv('E:\Magang/bali.csv', index=False,sep = ",")
 ```
 ![component](gambar/11.jpeg)
