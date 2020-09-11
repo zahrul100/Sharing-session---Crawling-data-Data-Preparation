@@ -8,7 +8,7 @@
 
 3. Menginstal Library Berikut Pada Anaconda Prompt
 
-Cara Membuka Anaconda Promp : 
+### Cara Membuka Anaconda Promp : 
 
 Windows :
 1.Click Start(Gambar Windows Pada Keyboard) 
