@@ -255,7 +255,7 @@ df.head()
    
      <img width="435" alt="19" src="https://user-images.githubusercontent.com/36990780/92843642-2a532400-f40f-11ea-9dfc-908def3aa116.PNG">
  
- Dokumentasi Terkait method Fillna di pandas bisa dilihat di link berikut [ Library Fillna Pandas  ] (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html)
+ Dokumentasi Terkait method Fillna di pandas bisa dilihat di link berikut [ Library Fillna Pandas  ](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html)
  ## Meyeleksi kolom kelurahan sesuai dengan output yang diminta 
  ```python3
  df = df[df['id_kelurahan'].str.len() >10]
