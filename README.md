@@ -206,7 +206,8 @@ df.head()
    * Output :
    
       <img width="342" alt="2" src="https://user-images.githubusercontent.com/36990780/92689707-b3b01b00-f369-11ea-8a3d-4ad663e7f6fb.PNG">
-   
+
+## Mengisi data kosong pada kolom kabupaten dan kecamatan
 ```python3
    df['kabupaten'] = df['kabupaten'].fillna(method='ffill')
    df['kecamatan'] = df['kecamatan'].fillna(method='ffill')
@@ -239,7 +240,8 @@ df.head()
    * Output :
       
       <img width="362" alt="5" src="https://user-images.githubusercontent.com/36990780/92690122-94fe5400-f36a-11ea-9675-130c0d912c2a.PNG">
-     
+ 
+ ## Memasukkan kolom provinsi ke dalam dataframe
  ```python3
  df['provinsi'] = provinsi
  ```
@@ -249,7 +251,8 @@ df.head()
    * Output :
       
       <img width="399" alt="6" src="https://user-images.githubusercontent.com/36990780/92690199-c5de8900-f36a-11ea-82fd-1f819e66ab8a.PNG">
-      
+
+## Menambahkan kolom keterangan sesuai dengan Output yang diminta
  ```python3
  df['keterangan'] = np.where(df['kelurahan'].isnull(), 'desa', 'kelurahan')
  ```
@@ -259,7 +262,8 @@ df.head()
    * Output :
       
       <img width="455" alt="7" src="https://user-images.githubusercontent.com/36990780/92690319-fc1c0880-f36a-11ea-806c-d1bc4e606679.PNG">
-   
+
+## Mengubah nama kolom kelurahan dan kabupaten
 ```python3
 df = df.rename(columns={"id_kelurahan":"id_dukcapil","kabupaten":"kabupaten_kota"})
 ```
@@ -269,7 +273,8 @@ df = df.rename(columns={"id_kelurahan":"id_dukcapil","kabupaten":"kabupaten_kota
    * Output :
       
       <img width="455" alt="8" src="https://user-images.githubusercontent.com/36990780/92690393-253c9900-f36b-11ea-9d67-3e2163d39ea0.PNG">
-      
+ 
+ ## Memisahkan string pada kolom id_prov, id_kab, id_kec, dan id_kel 
  ```python3
 df['id_prov'] = df['id_dukcapil'].str.split('.').str[:1]
 df['id_kab'] = df['id_dukcapil'].str.split('.').str[:2]
@@ -283,6 +288,7 @@ df['id_kel'] = df['id_dukcapil'].str.split('.').str[:4]
       
       <img width="647" alt="9" src="https://user-images.githubusercontent.com/36990780/92690788-c88dae00-f36b-11ea-9e45-75c8daf56834.PNG">
 
+## Menggabungkan 
 ```python3
 df['id_prov'] = df['id_prov'].str.join('') 
 df['id_kab'] = df['id_kab'].str.join('') 
@@ -295,6 +301,7 @@ df['id_kel'] = df['id_kel'].str.join('')
       
       <img width="610" alt="10" src="https://user-images.githubusercontent.com/36990780/92690897-eeb34e00-f36b-11ea-97a0-977350475ee3.PNG">
       
+## Menambahkan kolom kelurahan_desa    
 ```python3
 df['kelurahan_desa']=np.where(df['kelurahan'].isnull(), df['desa'], df['kelurahan'])
 ```
@@ -304,7 +311,8 @@ df['kelurahan_desa']=np.where(df['kelurahan'].isnull(), df['desa'], df['keluraha
    * Output :
       
       <img width="680" alt="11" src="https://user-images.githubusercontent.com/36990780/92691005-1d312900-f36c-11ea-8c52-2023847e17c2.PNG">
-      
+
+## Menghapus kolom kelurahan dan desa
 ```python3
 del df['kelurahan']
 del df['desa']
@@ -314,14 +322,15 @@ del df['desa']
    * Output :
       
       <img width="584" alt="12" src="https://user-images.githubusercontent.com/36990780/92691114-4651b980-f36c-11ea-9867-0047d4fe7293.PNG">
-   
+
+## Menyimpan nama kolom
 ```python3
 columnsTitles = ['id_dukcapil', 'id_prov', 'id_kab','id_kec','id_kel','provinsi','kabupaten_kota','kecamatan','kelurahan_desa','keterangan']
 ```
    Keterangan :
-   * ```ColumnsTitles``` berfungsi untuk mengambil nama kolom yang mau diambil sesuai kebutuhan kita.
+   * ```ColumnsTitles``` berfungsi untuk menyimpan nama kolom yang mau diambil sesuai kebutuhan kita.
  
-
+## Mengurutkan nama kolom sesuai input yang diminta 
  ```python3
  df = df.reindex(columns=columnsTitles)
  ```
@@ -330,8 +339,9 @@ columnsTitles = ['id_dukcapil', 'id_prov', 'id_kab','id_kec','id_kel','provinsi'
    * Output :
    
       <img width="600" alt="13" src="https://user-images.githubusercontent.com/36990780/92691314-96c91700-f36c-11ea-9cd9-0a5c413c5b3a.PNG">
-   
-```
+
+## Menyimpan dataframe ke dalam bentuk csv
+```python3
 df.to_csv('E:\Magang/sprint/outputprov_'+provinsi+'.csv', index=False)
 ```
    Keterangan : 
