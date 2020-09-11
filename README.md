@@ -83,9 +83,10 @@ Keterangan :
 
 Untuk membaca pdf menggunakan syntaq 
 
-`tabula.read_pdf('path',pages='pagesingindicetak')`
+`tabula.read_pdf('path',pages='pages_ingin_dikonversi')`
 
 Untuk dokumentasi lebih lanjut dapat menuju link [ berikut ] (https://tabula-py.readthedocs.io/en/latest/tabula.html)
+
 File Csv Per Page akan tersimpan di direktori `E:\Magang/new/bali/` ,Maka Langkah Selanjutnya adalah menggabungkan
 file csv tersebut menjadi 1.
 Disini kita perlu menyimpan terlebih dahulu semua nama csv yang ada dalam direketori dengan menggunakan library *glob*
