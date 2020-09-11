@@ -167,7 +167,7 @@ Berikut ini contoh cleansing dan formating data Pulau Bali dengan hasil crawling
      
 * Output :
 
-   <img width="960" alt="16" src="https://user-images.githubusercontent.com/36990780/92757046-8f7b2b00-f3b7-11ea-97bb-a08231016bcc.PNG">
+   ![21](https://user-images.githubusercontent.com/36990780/92846635-7c497900-f412-11ea-8d69-cd68cd79faf2.jpg)
    
 Berikut ini untuk script cleansing menggunakan python :
 
