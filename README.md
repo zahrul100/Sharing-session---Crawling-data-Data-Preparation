@@ -85,13 +85,9 @@ Untuk membaca pdf menggunakan syntaq
 
 `tabula.read_pdf('path',spreadsheet=True,pages='pages_ingin_dikonversi')`
 
-dimana : 
-
-path               : merupakan lokasi file
-
-spreadsheet = true : untuk membuat row pertama menjadi nama kolom
-
-pages              : merupakan halaman pada pdf yang ingin dibaca
+* path               : merupakan lokasi file
+* spreadsheet = true : untuk membuat row pertama menjadi nama kolom
+* pages              : merupakan halaman pada pdf yang ingin dibaca
 
 
 
