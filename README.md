@@ -7,6 +7,18 @@
 2. [ File PDF Untuk Crawling  ](https://drive.google.com/file/d/1gcnAAHPgjZqSc20yw22m9U7Hejr2mpN0/view?usp=sharing)
 
 3. Menginstal Library Berikut Pada Anaconda Prompt
+
+Cara Membuka Anaconda Promp : 
+
+Windows :
+1.Click Start(Gambar Windows Pada Keyboard) 
+2.Ketik "Anaconda Prompt"
+
+macOS: 
+1.Buka Spotlight (Cmd+Space)
+2.Ketik Navigator
+
+Reference : [ Dokumentasi Anaconda ] (https://docs.anaconda.com/anaconda/install/verify-install/)
    
  * **Pandas** 
  ```
