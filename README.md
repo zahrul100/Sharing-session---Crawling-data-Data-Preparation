@@ -393,7 +393,7 @@ df.to_csv('E:\Magang/sprint/outputprov_'+provinsi+'.csv', index=False)
  # Fillna
  Fillna adalah fungsi pada library pandas untuk mengisi baris yang null dengan nilai lain
  
- ![component](gambar/fillnainput.jpeg)
+ ![component](gambar/filnainput.jpeg)
  
  Tabel diatas akan diolah dengan fillna dengan code berikut :
  ```python3
