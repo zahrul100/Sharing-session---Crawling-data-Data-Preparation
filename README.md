@@ -47,7 +47,7 @@ conda install -c conda-forge tabula-py
   
   - [2. Cleaning and Formatting Data](#2-Cleaning-and-Formatting-Data)
   
-  - [ Update : Fillna Method ](#3-fillna)
+  - [ Update : Fillna Method ](#fillna)
   
 ## 1. Crawling From PDF
 Pada Sharing Session kali ini kita akan membahas tentan Crawling Data dengan sumber table dari pdf 
