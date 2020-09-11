@@ -184,9 +184,9 @@ Berikut ini contoh cleansing dan formating data Pulau Bali dengan hasil crawling
    
 Berikut ini untuk script cleansing menggunakan python :
 
-<img width="400" alt="1" src="https://user-images.githubusercontent.com/36990780/92688340-6337be00-f367-11ea-971c-d19d03eb145f.PNG">
+<img width="213" alt="23" src="https://user-images.githubusercontent.com/36990780/92860098-0fd67600-f422-11ea-987b-95810affd0c6.PNG">
 
-```
+```python3
 import pandas as pd
 import numpy as np
 ```
@@ -195,7 +195,7 @@ import numpy as np
    * ```import pandas as pd ```:  mengimport library pandas as pd terlebih dahulu (pandas untuk membersihkan data mentah ke bentuk data yang dapat diolah)
    * ```import numpy as np ```: mengimport library numpy as pd terlebih dahulu (numpy untuk mengubah python ke pemodelan ilmiah)
 
-```
+```python3
 provinsi = "Bali"
 ```
    Untuk menyimpan nama kolom pada provinsi 
@@ -211,7 +211,7 @@ df = pd.read_csv("E:\Magang/Bali.csv",sep=',')
    * contoh separator : 
       <img width="291" alt="17" src="https://user-images.githubusercontent.com/36990780/92835918-063f1500-f406-11ea-8366-b584b45565a6.PNG">
    
-```
+```python3
 df.head()
 ```
    Keterangan :
@@ -232,7 +232,7 @@ df.head()
      <img width="435" alt="19" src="https://user-images.githubusercontent.com/36990780/92843642-2a532400-f40f-11ea-9dfc-908def3aa116.PNG">
  
  ## Meyeleksi kolom kelurahan sesuai dengan output yang diminta 
- ```
+ ```python3
  df = df[df['id_kelurahan'].str.len() >10]
  ```
    Keterangan :
@@ -255,6 +255,7 @@ df.head()
       <img width="362" alt="5" src="https://user-images.githubusercontent.com/36990780/92690122-94fe5400-f36a-11ea-9675-130c0d912c2a.PNG">
  
  ## Memasukkan kolom provinsi ke dalam dataframe
+ 
  ```python3
  df['provinsi'] = provinsi
  ```
