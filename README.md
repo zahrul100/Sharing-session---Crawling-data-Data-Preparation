@@ -187,7 +187,7 @@ provinsi = "Bali"
 ```
    Untuk menyimpan nama kolom pada provinsi 
 
-
+## Membaca file csv
 ```
 df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')
 ```
@@ -195,6 +195,8 @@ df = pd.read_csv("E:\Magang/new/Bali.csv",sep=',')
    
    * ```pd.read_csv``` : untuk membaca file dengan format CSV dan mengkonversinya menjadi pandas Dataframe
    * ```sep='``` : parameter sep=',' sesuai separator pada file
+   * contoh separator : 
+      <img width="291" alt="17" src="https://user-images.githubusercontent.com/36990780/92835918-063f1500-f406-11ea-8366-b584b45565a6.PNG">
    
 ```
 df.head()
@@ -205,7 +207,8 @@ df.head()
    
       <img width="342" alt="2" src="https://user-images.githubusercontent.com/36990780/92689707-b3b01b00-f369-11ea-8a3d-4ad663e7f6fb.PNG">
    
-```df['kabupaten'] = df['kabupaten'].fillna(method='ffill')
+```python3
+   df['kabupaten'] = df['kabupaten'].fillna(method='ffill')
    df['kecamatan'] = df['kecamatan'].fillna(method='ffill')
 ```
  Keterangan :
@@ -214,6 +217,7 @@ df.head()
    
      <img width="348" alt="3" src="https://user-images.githubusercontent.com/36990780/92689832-f7a32000-f369-11ea-8311-81757974f550.PNG">
  
+ ## Meyeleksi kolom kelurahan sesuai dengan output yang diminta 
  ```
  df = df[df['id_kelurahan'].str.len() >10]
  ```
@@ -223,11 +227,12 @@ df.head()
    
       <img width="385" alt="4" src="https://user-images.githubusercontent.com/36990780/92689967-42bd3300-f36a-11ea-937e-0178f35b342e.PNG">
    
- ```
- df['desa'] = df['desa'].str.replace('\r\d+', '')
- df['kelurahan'] = df['kelurahan'].str.replace('\r\d+', '')
- df['kecamatan'] = df['kecamatan'].str.replace('\r\d+', '')
- df['kabupaten'] = df['kabupaten'].str.replace('\r\d+', '')
+ ## Menghilangkan integer pada kolom desa, kelurahan, kecamatan dan kabupaten
+ ```python3
+ df['desa'] = df['desa'].str.replace('\d+', '')
+ df['kelurahan'] = df['kelurahan'].str.replace('\d+', '')
+ df['kecamatan'] = df['kecamatan'].str.replace('\d+', '')
+ df['kabupaten'] = df['kabupaten'].str.replace('\d+', '')
  ```
    Keterangan :
    * ```str.replace ('\r\d+', '')``` untuk mengganti '\r' dan '\d+' dengan karakter lain menjadi ''(dimana \d+ adalah regex untuk nomor integer)
@@ -235,7 +240,7 @@ df.head()
       
       <img width="362" alt="5" src="https://user-images.githubusercontent.com/36990780/92690122-94fe5400-f36a-11ea-9675-130c0d912c2a.PNG">
      
- ```
+ ```python3
  df['provinsi'] = provinsi
  ```
    Keterangan :
@@ -245,7 +250,7 @@ df.head()
       
       <img width="399" alt="6" src="https://user-images.githubusercontent.com/36990780/92690199-c5de8900-f36a-11ea-82fd-1f819e66ab8a.PNG">
       
- ```
+ ```python3
  df['keterangan'] = np.where(df['kelurahan'].isnull(), 'desa', 'kelurahan')
  ```
    Keterangan :
@@ -255,7 +260,7 @@ df.head()
       
       <img width="455" alt="7" src="https://user-images.githubusercontent.com/36990780/92690319-fc1c0880-f36a-11ea-806c-d1bc4e606679.PNG">
    
-```
+```python3
 df = df.rename(columns={"id_kelurahan":"id_dukcapil","kabupaten":"kabupaten_kota"})
 ```
    Keterangan :
@@ -265,7 +270,7 @@ df = df.rename(columns={"id_kelurahan":"id_dukcapil","kabupaten":"kabupaten_kota
       
       <img width="455" alt="8" src="https://user-images.githubusercontent.com/36990780/92690393-253c9900-f36b-11ea-9d67-3e2163d39ea0.PNG">
       
- ```
+ ```python3
 df['id_prov'] = df['id_dukcapil'].str.split('.').str[:1]
 df['id_kab'] = df['id_dukcapil'].str.split('.').str[:2]
 df['id_kec'] = df['id_dukcapil'].str.split('.').str[:3]
@@ -278,7 +283,7 @@ df['id_kel'] = df['id_dukcapil'].str.split('.').str[:4]
       
       <img width="647" alt="9" src="https://user-images.githubusercontent.com/36990780/92690788-c88dae00-f36b-11ea-9e45-75c8daf56834.PNG">
 
-```
+```python3
 df['id_prov'] = df['id_prov'].str.join('') 
 df['id_kab'] = df['id_kab'].str.join('') 
 df['id_kec'] = df['id_kec'].str.join('') 
@@ -290,7 +295,7 @@ df['id_kel'] = df['id_kel'].str.join('')
       
       <img width="610" alt="10" src="https://user-images.githubusercontent.com/36990780/92690897-eeb34e00-f36b-11ea-97a0-977350475ee3.PNG">
       
-```
+```python3
 df['kelurahan_desa']=np.where(df['kelurahan'].isnull(), df['desa'], df['kelurahan'])
 ```
    keterangan :
@@ -300,7 +305,7 @@ df['kelurahan_desa']=np.where(df['kelurahan'].isnull(), df['desa'], df['keluraha
       
       <img width="680" alt="11" src="https://user-images.githubusercontent.com/36990780/92691005-1d312900-f36c-11ea-8c52-2023847e17c2.PNG">
       
-```
+```python3
 del df['kelurahan']
 del df['desa']
 ```
@@ -310,13 +315,14 @@ del df['desa']
       
       <img width="584" alt="12" src="https://user-images.githubusercontent.com/36990780/92691114-4651b980-f36c-11ea-9867-0047d4fe7293.PNG">
    
-```
+```python3
 columnsTitles = ['id_dukcapil', 'id_prov', 'id_kab','id_kec','id_kel','provinsi','kabupaten_kota','kecamatan','kelurahan_desa','keterangan']
 ```
    Keterangan :
    * ```ColumnsTitles``` berfungsi untuk mengambil nama kolom yang mau diambil sesuai kebutuhan kita.
  
- ```
+
+ ```python3
  df = df.reindex(columns=columnsTitles)
  ```
    keterangan :
