@@ -18,7 +18,7 @@ macOS:
 1.Buka Spotlight (Cmd+Space)
 2.Ketik Navigator
 
-Reference : [ Dokumentasi Anaconda ] (https://docs.anaconda.com/anaconda/install/verify-install/)
+Reference : [ Dokumentasi Anaconda ](https://docs.anaconda.com/anaconda/install/verify-install/)
    
  * **Pandas** 
  ```
