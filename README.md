@@ -390,7 +390,7 @@ df.to_csv('E:\Magang/sprint/outputprov_'+provinsi+'.csv', index=False)
       <img width="458" alt="14" src="https://user-images.githubusercontent.com/36990780/92691551-ee678280-f36c-11ea-9312-eef618f2b4f2.PNG">
    
   
- # Fillna
+ ## Fillna
  Fillna adalah fungsi pada library pandas untuk mengisi baris yang null dengan nilai lain
  
  ![component](gambar/filnainput.jpeg)
@@ -410,6 +410,13 @@ df['kelurahan'] = df['kelurahan'].fillna(value=77, limit=3) #fillna Menggunakan 
 
 
 Keterangan : 
+
+Pada fungsi fillna mempunyai beberapa metode yaitu :
+* pada kolom kabupaten menggunakan method 0 sehingga membuat Tabel yang Null/Nan Menjadi 0
+* pada kolom kecamatan menggunakan method 'ffill'sehingga membuat baris yang Null/Nan mengikuti baris diatasnya yang tidak Null/Nan
+* Pada Kolom Kelurahan menggunakan method values,pada method values membutuhkan 2 input yaitu: 
+   *value* Berfungsi untuk memberikan nilai sesuai yang diinputkan
+   *limit* Berfungsi untuk memberikan batas sampai berapa kali input diberikan pada baris Null/Nan
 
 
 
