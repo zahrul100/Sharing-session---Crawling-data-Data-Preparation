@@ -47,6 +47,8 @@ conda install -c conda-forge tabula-py
   
   - [2. Cleaning and Formatting Data](#2-Cleaning-and-Formatting-Data)
   
+  - [ Update : Fillna Method ](#3-Fillna)
+  
 ## 1. Crawling From PDF
 Pada Sharing Session kali ini kita akan membahas tentan Crawling Data dengan sumber table dari pdf 
 kedalam Format Csv
@@ -387,7 +389,27 @@ df.to_csv('E:\Magang/sprint/outputprov_'+provinsi+'.csv', index=False)
    * untuk menyimpan data frame dalam bentuk csv dan disimpan ke direktori kita
       <img width="458" alt="14" src="https://user-images.githubusercontent.com/36990780/92691551-ee678280-f36c-11ea-9312-eef618f2b4f2.PNG">
    
-      
+  
+ # Fillna
+ Fillna adalah fungsi pada library pandas untuk mengisi baris yang null dengan nilai lain
+ 
+ ![component](gambar/inputfillna.jpeg)
+ 
+ Tabel diatas akan diolah dengan fillna dengan code berikut :
+ ```python3
+df['kabupaten'] = df['kabupaten'].fillna(0) #fillna Menggunakan  0
+df['kecamatan'] = df['kecamatan'].fillna(method='ffill') #fillna Menggunakan Method 'ffill'
+
+df['kelurahan'] = df['kelurahan'].fillna(value=77, limit=3) #fillna Menggunakan Values
+ 
+ ```
+ 
+ Sehingga Outputnya Adalah Seperti Berikut :
+
+ ![component](gambar/outputfillna.jpeg)
+
+
+Keterangan : 
 
 
 
