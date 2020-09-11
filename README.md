@@ -172,14 +172,13 @@ output akan seperti berikut
 
 ## 2. Cleansing and Formatting Data
 Seringkali raw data yang diterima seorang Data Scientist tidak dapat langsung digunakan untuk modelling, untuk tipe data seperti ini maka diperlukan tahap pre-processing; salah satunya adalah data cleansing.
-Berikut ini contoh cleansing dan formating data Pulau Bali dengan hasil crawling sebagai berikut [ File Csv untuk Pulau Bali  ](https://drive.google.com/file/d/1nFHnrPCmEQhEuFcRavMP0HkbilYNuPQK/view?usp=sharing)
-
+Berikut ini contoh input dan output cleansing dan formating data Pulau Bali 
 * Input :
-
+   [ File Csv untuk Pulau Bali  ](https://drive.google.com/file/d/1nFHnrPCmEQhEuFcRavMP0HkbilYNuPQK/view?usp=sharing)
    <img width="423" alt="15" src="https://user-images.githubusercontent.com/36990780/92756928-72def300-f3b7-11ea-947b-7f752485185d.PNG">
      
 * Output :
-
+   [ File Csv untuk Output Pulau Bali  ] https://drive.google.com/file/d/1-KaTVe5YlN1hOgyxc8-bbUkUEqYyp73H/view?usp=sharing 
    ![21](https://user-images.githubusercontent.com/36990780/92846635-7c497900-f412-11ea-8d69-cd68cd79faf2.jpg)
    
 Berikut ini untuk script cleansing menggunakan python :
