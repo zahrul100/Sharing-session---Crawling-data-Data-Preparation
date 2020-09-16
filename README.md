@@ -114,7 +114,7 @@ Untuk membaca pdf menggunakan syntaq
 
 
 
-Untuk dokumentasi lebih lanjut dapat menuju link [ berikut ] (https://tabula-py.readthedocs.io/en/latest/tabula.html)
+Untuk dokumentasi lebih lanjut dapat menuju link [ berikut ](https://tabula-py.readthedocs.io/en/latest/tabula.html)
 
 File Csv Per Page akan tersimpan di direktori `E:\Magang/new/bali/` ,Maka Langkah Selanjutnya adalah menggabungkan
 file csv tersebut menjadi 1.
